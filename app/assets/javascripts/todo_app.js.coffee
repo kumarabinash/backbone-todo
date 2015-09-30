@@ -3,7 +3,9 @@ window.TodoApp =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  initialize: ->
+    new TodoApp.Routers.Todos()
+    Backbone.history.start()
 
 $(document).ready ->
   TodoApp.initialize()
