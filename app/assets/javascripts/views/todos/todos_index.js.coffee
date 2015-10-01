@@ -11,7 +11,6 @@ class TodoApp.Views.TodosIndex extends Backbone.View
     this
 
   appendTodo: (todo) ->
-    console.log("doing thingy")
     view = new TodoApp.Views.Todo({
       model: todo
     })

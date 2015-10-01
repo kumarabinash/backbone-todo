@@ -8,7 +8,6 @@ class TodoApp.Routers.Todos extends Backbone.Router
     @collection.fetch({
       success: ->
         that.data = that.collection.models
-        console.log that.collection.toJSON()
         that.collection.reset(that.data)
     })
 
