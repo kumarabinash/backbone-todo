@@ -1,6 +1,9 @@
-<div class="form-group <%= @todo.get('priority') %> <%= @todo.get('status') %>">
+<div class="form-group todo-item <%= @todo.get('priority') %> <%= @todo.get('status') %>">
   <label class="control-label">
     <input class="input-control" type="checkbox"  value="<%= @todo.get('task') %>"/>
     <%= @todo.get('task') %>
   </lable>
+</div>
+<div class="todo-details">
+Hello there
 </div>
