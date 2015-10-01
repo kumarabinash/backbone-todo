@@ -3,8 +3,8 @@ class TodoApp.Views.TodosIndex extends Backbone.View
   template: JST['todos/index']
 
   events:
-    "click #todos.todo-item": "diplayDetails"
     "click #btn-add-todo": "addTodo"
+    "keypress": "keyPressed"
 
   initialize: ->
     @collection.on('reset', @render, this)
@@ -21,9 +21,6 @@ class TodoApp.Views.TodosIndex extends Backbone.View
     })
     $(@el).find("#todos").append(view.render().el)
 
-  displayDetails: ->
-    console.log "Hello there"
-
   addTodo: (e) ->
     e.preventDefault()
     todo_task = $("#todo-task").val()
@@ -32,3 +29,6 @@ class TodoApp.Views.TodosIndex extends Backbone.View
       wait: true,
       success: -> $("#todo-task").val("")
       error: -> @handleError
+  
+  keyPressed: ->
+    console.log "Key Pressed"

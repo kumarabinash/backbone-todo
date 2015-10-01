@@ -1,9 +1,10 @@
 <div class="form-group todo-item <%= @todo.get('priority') %> <%= @todo.get('status') %>">
-  <label class="control-label">
-    <input class="input-control" type="checkbox"  value="<%= @todo.get('task') %>"/>
+  <label class="control-label <%= if @todo.get('status') == 'complete' then 'complete' else 'incomplete' %>">
+    <input class="input-control" type="checkbox" <%= if @todo.get('status') == 'complete' then 'checked="checked"'  %> value="<%= @todo.get('task') %>"/>
     <%= @todo.get('task') %>
   </lable>
 </div>
 <div class="todo-details">
-Hello there
+	<span class="priority">Priority: <%= @todo.get('priority') %></span><br />
+	<span class="status">Status: <%= @todo.get('status') %></span>
 </div>

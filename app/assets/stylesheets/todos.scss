@@ -4,7 +4,7 @@ body{
 
 #container{
   width: 500px;
-  background: #A9EEE6;
+  background: #F9A1BC;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
@@ -26,21 +26,42 @@ body{
    padding: 20px;
    
    li {
-    background: #F9A1BC;
-    text-color: #625772;
+    background: #625772;
+    color: #E4F091;
     font-size: 16px;
     font-weight:300;
     list-style-type: none;
     margin:0;
-    padding: 10px;
-    border-bottom: 1px dotted #625772;
+    padding: 15px;
+    border-bottom: 1px dotted #bbb;
 
     .form-group{
       margin-bottom:0;
+
+      .complete{
+	text-decoration: line-through;
+      }
+
+      .control-label{
+	margin-bottom: 0;
+      }
+    }
+
+    .priority, .status {
+      font-size: 14px;
     }
     
     .todo-details{
-      display:none;
+      overflow: hidden;
+      //display:none;
+      opacity: 0;
+      height: 0;
+      transition: all 0.5s;
+    }
+
+    .todo-details.active{
+      opacity: 1;
+      height:auto;
     }
   }
  }
