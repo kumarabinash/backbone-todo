@@ -7,3 +7,5 @@
 </form>
 <ul id="todos">
 </ul>
+<div id="filters">
+</div>

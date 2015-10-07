@@ -7,4 +7,5 @@
 <div class="todo-details">
 	<span class="priority">Priority: <%= @todo.get('priority') %></span><br />
 	<span class="status">Status: <%= @todo.get('status') %></span>
+	<button class="btn btn-danger delete-todo" data-todoId="<%= @todo.get('id') %>">Delete Item</button>
 </div>
